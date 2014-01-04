@@ -10,7 +10,6 @@ if ($CRIT[1] != "") {
     $def[1] .= "HRULE:$CRIT[1]#FF0000 ";       
 }
 
-$def[1] .= rrd::line3("var1", "#000000", "$NAME[1]") ;
 $def[1] .= rrd::gradient("var1", "#0000FF", "#FF0000", "$NAME[1]");
 $def[1] .= rrd::gprint("var1", array("LAST", "AVERAGE", "MAX"), "%6.2lf");
 ?>
