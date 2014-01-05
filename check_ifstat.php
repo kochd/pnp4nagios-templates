@@ -12,6 +12,6 @@ if ($CRIT[1] != "") {
 }
 $def[1] .= rrd::line1("var1", "#0000ff", "$NAME[1]") ;
 $def[1] .= rrd::gprint("var1", array("LAST", "AVERAGE", "MAX"), "%6.2lf");
-$def[1] .= rrd::area("var2", "#ff0000", "$NAME[2]") ;
+$def[1] .= rrd::line1("var2", "#ff0000", "$NAME[2]") ;
 $def[1] .= rrd::gprint("var2", array("LAST", "AVERAGE", "MAX"), "%6.2lf");
 ?>
