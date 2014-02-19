@@ -17,6 +17,9 @@ if ($WARN[1] != "") {
 if ($CRIT[1] != "") {
     $def[1] .= "HRULE:$CRIT[1]#FF0000 ";
 }
+// 0489B1
+$def[1] .= rrd::area("var9", "#BBBBFF", "$NAME[9]") ;
+$def[1] .= rrd::gprint("var9", array("LAST", "AVERAGE", "MAX"), "%6.2lf");
 $def[1] .= rrd::line2("var1", "#5858FA", "$NAME[1]") ;
 $def[1] .= rrd::gprint("var1", array("LAST", "AVERAGE", "MAX"), "%6.2lf");
 $def[1] .= rrd::line2("var2", "#8A0886", "$NAME[2]") ;
@@ -33,6 +36,6 @@ $def[1] .= rrd::line2("var7", "#FE2E2E", "$NAME[7]") ;
 $def[1] .= rrd::gprint("var7", array("LAST", "AVERAGE", "MAX"), "%6.2lf");
 $def[1] .= rrd::line2("var8", "#0B3B39", "$NAME[8]") ;
 $def[1] .= rrd::gprint("var8", array("LAST", "AVERAGE", "MAX"), "%6.2lf");
-$def[1] .= rrd::line2("var9", "#0489B1", "$NAME[9]") ;
-$def[1] .= rrd::gprint("var9", array("LAST", "AVERAGE", "MAX"), "%6.2lf");
+
+
 ?>
